@@ -46,7 +46,7 @@ async def lifespan(app: FastAPI):
             if not assets_to_download[asset_name]:
                 raise ValueError(f"{asset_name} not found in latest release")
         
-        # Download and load model
+        # Download and load model  
         logger.info(f"Downloading model, scaler, and encoders...")
         
         model_data = requests.get(assets_to_download['model.pkl']).content
