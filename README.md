@@ -29,7 +29,7 @@ Se ha creado la carpeta `.github/workflows/` con el fichero `integration.yml`, q
 ### 4. Despliegue en Render
 
 - Se creó el web service en Render siguiendo el mismo proceso que en clase.
-- Al ejecutarlo, se produjo un error relacionado con la carpeta `deployment`, que todavía no existe en el repositorio. Queda pendiente de resolver.
+- Al ejecutarlo, se produjo un error relacionado con la carpeta `deployment`, que todavía no existe en el repositorio. Queda preparado para cuando se cree la pipeline del deploy, con el backend, que va a estar en el directorio `deploy` del repositorio.
 
 ### 5. Ruleset para la rama main
 
@@ -51,13 +51,12 @@ Se ha creado la carpeta `.github/workflows/` con el fichero `integration.yml`, q
   - Actualización y publicación del modelo entrenado en la sección de **Releases** de GitHub.
 - Se creó una PR con estos cambios. Tras algunos fallos iniciales en el pipeline por equivocación nuestra en el código, Sheila revisó y aprobó la PR, integrando el workflow de build en `main`.
 
----
+### 8. Pipeline de deploy: (`deploy.yml`)
+
+- Se copia el directorio `deployment`, que contiene el endpoint que va a proveer el acceso al modelo en el subdirectorio `app`
+- No se ha encontradoel modelo para deployment.yml
 
 ## Pendiente
-
-### Por parte de Paris y Claudi
-
-- **Pipeline de deploy**: implementar el workflow de despliegue continuo como indica el enunciado..
 
 ### Por parte de todos
 
