@@ -39,6 +39,12 @@ jobs:
       - name: Run model tests
         run: python model_tests/test_model.py
 
+      # Fallaba el bild y me ha pedido añadir esta línea 
+      - name: Create Git tag
+        run: |
+          git tag model-${{ github.run_number }}
+          git push origin model-${{ github.run_number }}
+
       - name: Upload model to GitHub Release
         uses: softprops/action-gh-release@v1
         with:
