@@ -42,10 +42,10 @@ jobs:
             const results = fs.readFileSync('test-results/results.log', 'utf8');
             const truncated = results.length > 65000 ? results.slice(0, 65000) + '\\n...TRUNCATED...' : results;
             github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: context.payload.pull_request.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `### 🧪 Test Results with Coverage\n\n\`\`\`\n${truncated}\n\`\`\``
+              body: `### Test Results with Coverage\n\n\`\`\`\n${truncated}\n\`\`\``
             });
 
       - name: Fail the job if tests failed
