@@ -45,7 +45,7 @@ def main():
     elapsed = time.time() - start_time
     logger.info(f"Model training complete. Time taken: {elapsed:.2f} seconds")
     
-    # Evaluate model
+    # Evaluate model  
     evaluate(model, X_test, y_test)
 
     # Save model and preprocessing artifacts

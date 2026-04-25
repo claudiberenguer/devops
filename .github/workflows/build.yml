@@ -1,6 +1,7 @@
 name: Build Model
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -51,6 +52,3 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload model to GitHub Release
-        uses: softprops/action-gh-release@v1
